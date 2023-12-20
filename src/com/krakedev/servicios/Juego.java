@@ -10,7 +10,7 @@ public class Juego {
 
 	private ArrayList<ArrayList<Carta>> cartasJugador;
 	
-	public Juego() {
+	public Juego(Naipe naipe) {
         naipe = new Naipe();
         naipe.barajar();
         cartasJugador = new ArrayList<ArrayList<Carta>>();
@@ -35,7 +35,7 @@ public class Juego {
 
 		for (int i = 0; i < cartasPorjugador; i++) {
 	        for (ArrayList<Carta> cartasActualJugador : cartasJugador) {
-	                Carta cartaEntregada = naipe.getCartas().remove(3);
+	                Carta cartaEntregada = naipe.getCartas().remove(0);
 	                cartasActualJugador.add(cartaEntregada);
 	            }
 	        }
